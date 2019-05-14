@@ -1,42 +1,47 @@
-import React, {Component} from 'react';
-import Navigation from './components/Navbar/Navbar';
-import {Button, Input} from 'reactstrap';
-import Jumbo from './components/Jumbotron/Jumobotron';
-import Foot from './components/Footer/Footer';
- 
-class App extends Component{
-    state ={name: 'Zac', clicks: 0, test: ['dog', 'cat', 'bird']}
+import React from 'react';
+import './App.css'
+import {Route, Switch} from 'react-router-dom'
+import Main from './containers/Main/Main'
 
-    raiseCounter = (zac)  => {
-      const newArray = this.state.test
-      // this.state.test[0] = 'chipper'
-      const newClicks = this.state.clicks += 1
 
-      this.setState({clicks:newClicks, test: newArray})
-    }
+function App () {
 
-    changeName = (event)  => {
-      console.log(event.target.value)
-      const newName = event.target.value 
-      this.setState({ name: newName })
-    }
-
-    render() {
-        return(
-          <div className='container'>
-            <Navigation />
-            <Jumbo />
-            <Button color="primary" onClick={(zac) => this.raiseCounter(zac)}>
-              Counter
-            </Button>
-            <Input name='Name of Input' placeholder='Insert Name here' onChange={(cody) => this.changeName(cody)}/>
-            {this.state.name} has clicked this {this.state.clicks} times
-            <hr />
-            <Foot />
-           </div>
-           
-        );
-    };
+  return (
+    <div>
+      <Switch>
+        <Route
+          exact
+          path='/'
+          component={Main}
+        >
+        </Route>
+        {/* <Route
+          exact
+          path='/soundtrack'
+          component={SoundTrack}
+        >
+        </Route>
+        <Route
+          exact
+          path='/inspiration'
+          component={Inspiration}
+        >
+        </Route>
+        <Route
+          exact
+          path='/tools'
+          component={Tools}
+        >
+        </Route>
+        <Route
+          path='/'
+          component={NotFound}
+        >
+        </Route> */}
+      </Switch>
+  </div>
+  );
+  
 }
 
 export default App;
