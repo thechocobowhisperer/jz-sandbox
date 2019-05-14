@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import Navigation from '../../components/Navbar/Navbar';
-import {Button, Input} from 'reactstrap';
-import Jumbo from '../../components/Jumbotron/Jumobotron';
 import Foot from '../../components/Footer/Footer';
  
-class Main extends Component{
+class Tools extends Component{
     state ={name: 'Zac', clicks: 0, test: ['dog', 'cat', 'bird']}
 
     raiseCounter = (zac)  => {
@@ -24,12 +22,7 @@ class Main extends Component{
         return(
           <div className='container'>
             <Navigation />
-            <Jumbo />
-            <Button color="primary" onClick={(zac) => this.raiseCounter(zac)}>
-              Counter
-            </Button>
-            <Input name='Name of Input' placeholder='Insert Name here' onChange={(cody) => this.changeName(cody)}/>
-            {this.state.name} has clicked this {this.state.clicks} times
+            
             <hr />
             <Foot />
            </div>
@@ -38,5 +31,4 @@ class Main extends Component{
     };
 }
 
-export default Main;
-
+export default Tools;

@@ -6,11 +6,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavLink
+ } from 'reactstrap';
+ import {Link} from 'react-router-dom'
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -35,31 +33,14 @@ export default class Navigation extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="">Soundtrack</NavLink>
+                <NavLink><Link to='/soundtrack'>Soundtrack</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">Inspiration</NavLink>
+                <NavLink><Link push to='/inspiration'>Inspiration</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">Tools</NavLink>
+                <NavLink><Link push to='/tools'>Tools</Link></NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

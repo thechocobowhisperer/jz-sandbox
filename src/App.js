@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css'
 import {Route, Switch} from 'react-router-dom'
 import Main from './containers/Main/Main'
+import Soundtrack from './containers/Soundtrack/Soundtrack'
+import Inspiration from './containers/Inspiration/Inspiration'
+import Tools from './containers/Tools/Tools'
+import NotFound from './containers/NotFound/NotFound'
 
 
 function App () {
@@ -15,10 +19,10 @@ function App () {
           component={Main}
         >
         </Route>
-        {/* <Route
+        <Route
           exact
           path='/soundtrack'
-          component={SoundTrack}
+          component={Soundtrack}
         >
         </Route>
         <Route
@@ -37,7 +41,7 @@ function App () {
           path='/'
           component={NotFound}
         >
-        </Route> */}
+        </Route>
       </Switch>
   </div>
   );
