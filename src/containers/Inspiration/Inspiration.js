@@ -9,8 +9,11 @@ class Inspiration extends Component{
         return(
           <div className='container'>
             <Navigation />
-            <div className='container'>
+            <hr/>
+            <div  className='container contentTitle'>
                 <h1>Artists that inspire and motivate me:</h1>
+            </div>
+            <div className='container content'>
                 <ul>
                     <li><a href='https://www.twitch.tv/cnotbusch'>cnotbusch</a></li>
                     <li><a href='https://www.twitch.tv/mocha_minis'>Mocha_Minis</a></li>

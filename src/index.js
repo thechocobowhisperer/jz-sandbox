@@ -8,7 +8,7 @@ import './index.css';
 
 const app = (
     <BrowserRouter>
-        <App/>
+        <App />
     </BrowserRouter>
 )
 

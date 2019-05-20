@@ -8,8 +8,11 @@ class Tools extends Component{
         return(
           <div className='container'>
             <Navigation />
-            <div className='container'>
+            <hr/>
+            <div className='contentTitle'>
                 <h1>Tools/programs I use in various steps of the creative process:</h1>
+            </div>
+            <div className='container content'>
                 <div className='row'>
                     <ul className='col-md-6'>
                         <h3>Digital Tools</h3>
